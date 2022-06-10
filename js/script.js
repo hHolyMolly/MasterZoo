@@ -22,18 +22,59 @@ function showMenu() {
       body.classList.toggle("_lock-scroll");
     }
 
-    if (!elementTarget.closest(".header-menu") && menuBody.classList.contains("_active")) {
-      menuBody.classList.remove("_active");
-      body.classList.remove("_lock-scroll");
-    }
-
-    if (window.innerWidth < 768.2 && elementTarget.closest(".header-menu__item")) {
+    if (!elementTarget.closest(".header-menu") && menuBody.classList.contains("_active") ||
+      window.innerWidth < 768.2 && elementTarget.closest(".header-menu__item")) {
       menuBody.classList.remove("_active");
       body.classList.remove("_lock-scroll");
     }
   });
 }
 showMenu()
+
+//< " ФИКСИРОВАННЫЙ ХЕАДЕР ПРИ ПРОКРУТКЕ " >=============================================================================================================>//
+function scrollHeader() {
+  const header = document.querySelector(".header");
+
+  const scrollValue = 200; // Когда добавляем класс.
+  const scrollDelay = 200; // Задержка перед анимацией.
+
+  if (window.innerWidth > 768.2) {
+    // Условие если скролл больше scrollValue
+    const addClassOnScroll = function () {
+      if (!header.classList.contains("_scroll")) {
+        header.classList.add("_scroll-animation")
+
+        if (header.classList.contains("_scroll-animation")) {
+          setTimeout(function () {
+            header.classList.add("_scroll");
+          }, scrollDelay);
+        }
+      } else {
+        header.classList.remove("_scroll-animation");
+      }
+    };
+    // Условие если скролл меньше scrollValue
+    const removeClassOnScroll = function () {
+      if (header.classList.contains("_scroll")) {
+        header.classList.remove("_scroll");
+      }
+
+      if (header.classList.contains("_scroll-animation")) {
+        header.classList.remove("_scroll-animation");
+      }
+    };
+    // Вешаем событие scroll и добавляем наши условия
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > scrollValue || window.scrollY === scrollValue) {
+        addClassOnScroll()
+      } else {
+        removeClassOnScroll()
+      }
+    });
+
+  }
+}
+scrollHeader()
 
 //< " ДИНАМИЧЕСКИЙ АДАПТИВ " >=============================================================================================================>//
 function myDinamicAdapt() {

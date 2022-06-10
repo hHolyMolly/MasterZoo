@@ -236,7 +236,27 @@ body._lock-scroll {
 }
 
 .header {
+  -webkit-transition: -webkit-transform 0.4s ease 0s;
+  transition: -webkit-transform 0.4s ease 0s;
+  transition: transform 0.4s ease 0s;
+  transition: transform 0.4s ease 0s, -webkit-transform 0.4s ease 0s;
   background-color: rgba(255, 255, 255, 0.92);
+}
+
+@media (min-width: 768.2px) {
+  .header._scroll-animation {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  .header._scroll {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
 }
 
 @media (max-width: 768.2px) {
@@ -245,6 +265,7 @@ body._lock-scroll {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 200;
   }
 }
 
@@ -310,6 +331,8 @@ body._lock-scroll {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 64px;
+  -webkit-transition: background-color .3s ease .0s, color .3s ease .0s;
+  transition: background-color .3s ease .0s, color .3s ease .0s;
   border: 2px solid #162E3C;
   background-color: transparent;
   white-space: nowrap;
@@ -332,6 +355,11 @@ body._lock-scroll {
   .header__btn-login {
     line-height: calc(20px + 4 * ((100vw - 320px) / 880));
   }
+}
+
+.header__btn-login:hover {
+  background-color: #162E3C;
+  color: #fff;
 }
 
 @media (min-width: 768.2px) {
@@ -404,6 +432,8 @@ body._lock-scroll {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 64px;
+  -webkit-transition: background-color .3s ease .0s, color .3s ease .0s;
+  transition: background-color .3s ease .0s, color .3s ease .0s;
   border: 2px solid #162E3C;
   background: #162E3C;
   white-space: nowrap;
@@ -426,6 +456,11 @@ body._lock-scroll {
   .header__btn-try {
     line-height: calc(20px + 4 * ((100vw - 320px) / 880));
   }
+}
+
+.header__btn-try:hover {
+  background-color: transparent;
+  color: #162E3C;
 }
 
 @media (min-width: 768.2px) {
@@ -767,6 +802,8 @@ body._lock-scroll {
   }
 }
 
-.page {
-  height: 6000px;
+@media (max-width: 768.2px) {
+  .page {
+    padding-top: 70px;
+  }
 }
