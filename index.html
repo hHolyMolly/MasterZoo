@@ -1,4 +1,4 @@
-<html lang="ru">
+<html lang="en">
 
 <head>
    <!-- мета теги -->
@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/iconfonts.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
    <!-- имя страницы -->
    <title> Startico </title>
 </head>
@@ -20,9 +21,7 @@
             <div class="_container">
                <div class="banner__body">
                   <div class="banner__text">Explore all our services.</div>
-                  <button class="banner__close">
-                     <span></span>
-                  </button>
+                  <button class="banner__close"><span></span></button>
                </div>
             </div>
          </div>
@@ -34,17 +33,13 @@
                   </a>
                   <div class="header__action">
                      <nav class="header__menu header-menu">
-                        <button class="header-menu__icon">
-                           <span></span>
-                        </button>
+                        <button class="header-menu__icon"><span></span></button>
                         <div class="header-menu__body">
                            <div class="header-menu__top">
                               <a href="index.html" class="header-menu__logo">
                                  <img src="img/header/logo.svg" alt="logo">
                               </a>
-                              <button class="header-menu__close">
-                                 <span></span>
-                              </button>
+                              <button class="header-menu__close"><span></span></button>
                            </div>
                            <div class="header-menu__items">
                               <ul class="header-menu__list">
@@ -57,15 +52,69 @@
                         </div>
                      </nav>
                      <button data-da=".header-menu__items,552.2,1" class="header__btn-login _btn-click">Log in</button>
-                     <button data-da=".header-menu__items,552.2,2" class="header__btn-try _btn-click">Try for
-                        free</button>
+                     <button data-da=".header-menu__items,552.2,2" class="header__btn-try _btn-click">
+                        Try for free
+                     </button>
                   </div>
                </div>
             </div>
          </header>
          <!-- page -->
          <main class="page">
-
+            <section class="main-block">
+               <div class="main-block__container _container">
+                  <div class="main-block__body">
+                     <h1 data-wow-duration="1s" data-wow-delay="0.3s"
+                        class="main-block__title wow animate__animated animate__fadeInTopLeft">
+                        Head start your business
+                        today!
+                     </h1>
+                     <p data-wow-duration="1s" data-wow-delay="0.5s"
+                        class="main-block__text wow animate__animated animate__fadeInBottomLeft">
+                        Consectetur adipiscing elit. Integer sagittis quam magna, quis sollicitudin lorem ornare ut.
+                        Nulla et scelerisque mauris.
+                     </p>
+                     <div class="main-block__buttons">
+                        <button data-wow-duration="1s" data-wow-delay="0.7s"
+                           class="main-block__first-btn _btn-click wow animate__animated animate__fadeInLeft">
+                           Get started
+                        </button>
+                        <button data-wow-duration="1s" data-wow-delay="0.9s"
+                           class="main-block__second-btn _btn-click wow animate__animated animate__fadeInRight">
+                           Try for free <span class="_icon-arrow-btn"></span>
+                        </button>
+                     </div>
+                     <div class="main-block__icons">
+                        <a data-wow-duration="1s" data-wow-delay="1.1s"
+                           class="main-block__icon _icon-logo-01 _btn-click wow animate__animated animate__fadeInUp"
+                           href="#"></a>
+                        <a data-wow-duration="1s" data-wow-delay="1.3s"
+                           class="main-block__icon _icon-logo-02 _btn-click wow animate__animated animate__fadeInUp"
+                           href="#"></a>
+                        <a data-wow-duration="1s" data-wow-delay="1.5s"
+                           class="main-block__icon _icon-logo-03 _btn-click wow animate__animated animate__fadeInUp"
+                           href="#"></a>
+                        <a data-wow-duration="1s" data-wow-delay="1.7s"
+                           class="main-block__icon _icon-logo-04 _btn-click wow animate__animated animate__fadeInUp"
+                           href="#"></a>
+                     </div>
+                  </div>
+               </div>
+               <div class="main-block__element main-block-e">
+                  <div data-wow-delay="0.1s" data-wow-duration="1s"
+                     class=" main-block-e__item main-block-e__item_01 wow animate__animated animate__fadeInLeft">
+                     <img src="img/page/main-block/element/e-01.png" alt="element-01">
+                  </div>
+                  <div data-wow-duration="1s"
+                     class=" main-block-e__item main-block-e__item_02 wow animate__animated animate__fadeInRight">
+                     <img src="img/page/main-block/element/e-02.png" alt="element-02">
+                  </div>
+                  <div data-wow-duration="1s"
+                     class=" main-block-e__item main-block-e__item_03 wow animate__animated animate__fadeInUp">
+                     <img src="img/page/main-block/element/e-03.png" alt="element-03">
+                  </div>
+               </div>
+            </section>
          </main>
       </div>
       <!-- footer -->
@@ -77,12 +126,17 @@
          </div>
       </footer>
    </div>
+   <!-- Подключаем JS -->
+   <script src="js/script.js"></script>
+   <!-- Подключаем WowJS -->
+   <script src="js/wow.min.js"></script>
+   <script>
+      new WOW().init();
+   </script>
    <!-- Подключаем JQuery -->
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <!-- Подключаем слайдер Slick -->
    <script src="js/slick.min.js"></script>
-   <!-- Подключаем JS -->
-   <script src="js/script.js"></script>
 </body>
 
 </html>
