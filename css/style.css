@@ -1478,6 +1478,7 @@ body._lock-scroll {
     /* Если меньше контейнера */
     max-width: 420px;
     border-radius: 24px;
+    right: 0;
     /* Если меньше контейнера */
     bottom: 50px;
   }
