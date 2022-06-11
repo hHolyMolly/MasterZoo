@@ -242,6 +242,7 @@ body._lock-scroll {
 .header {
   position: relative;
   z-index: 200;
+  overflow: hidden;
   -webkit-transition: -webkit-transform .4s ease .0s;
   transition: -webkit-transform .4s ease .0s;
   transition: transform .4s ease .0s;
@@ -1246,6 +1247,7 @@ body._lock-scroll {
 
 .watch-block {
   position: relative;
+  overflow: hidden;
   background-color: #fff;
 }
 
