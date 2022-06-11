@@ -837,6 +837,8 @@ body._lock-scroll {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 1280px) {
@@ -1132,6 +1134,7 @@ body._lock-scroll {
 .main-block-e__item {
   width: 100%;
   position: absolute;
+  z-index: 1;
 }
 
 .main-block-e__item img {
