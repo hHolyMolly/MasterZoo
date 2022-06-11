@@ -101,13 +101,13 @@ h6 {
 
 @media (max-width: 1280px) {
   ._title {
-    font-size: calc(20px + 20 * ((100vw - 320px) / 960));
+    font-size: calc(18px + 22 * ((100vw - 320px) / 960));
   }
 }
 
 @media (max-width: 1280px) {
   ._title {
-    line-height: calc(28px + 20 * ((100vw - 320px) / 960));
+    line-height: calc(26px + 22 * ((100vw - 320px) / 960));
   }
 }
 
@@ -123,13 +123,13 @@ h6 {
 
 @media (max-width: 1280px) {
   ._text {
-    font-size: calc(13px + 5 * ((100vw - 320px) / 960));
+    font-size: calc(11px + 7 * ((100vw - 320px) / 960));
   }
 }
 
 @media (max-width: 1280px) {
   ._text {
-    line-height: calc(18px + 9 * ((100vw - 320px) / 960));
+    line-height: calc(16px + 11 * ((100vw - 320px) / 960));
   }
 }
 
@@ -732,7 +732,7 @@ body._lock-scroll {
   .header-menu__body {
     max-width: 375px;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     top: 0;
     left: -100%;
@@ -1405,20 +1405,30 @@ body._lock-scroll {
 
 @media (max-width: 1280px) {
   .speed-block__body {
-    -webkit-column-gap: calc(30px + 50 * ((100vw - 320px) / 960));
-            column-gap: calc(30px + 50 * ((100vw - 320px) / 960));
+    -webkit-column-gap: calc(40px + 40 * ((100vw - 320px) / 960));
+            column-gap: calc(40px + 40 * ((100vw - 320px) / 960));
   }
 }
 
 @media (max-width: 1280px) {
   .speed-block__body {
-    padding-top: calc(30px + 100 * ((100vw - 320px) / 960));
+    padding-top: calc(40px + 90 * ((100vw - 320px) / 960));
   }
 }
 
 @media (max-width: 1280px) {
   .speed-block__body {
     padding-bottom: calc(30px + 100 * ((100vw - 320px) / 960));
+  }
+}
+
+@media (max-width: 552.2px) {
+  .speed-block__body {
+    row-gap: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }
 
@@ -1438,10 +1448,6 @@ body._lock-scroll {
           column-gap: 10px;
   /* Если меньше контейнера */
   padding: 24px;
-  /* Если меньше контейнера */
-  margin-right: -50px;
-  /* Если меньше контейнера */
-  max-width: 420px;
   width: 100%;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
@@ -1456,46 +1462,89 @@ body._lock-scroll {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  /* Если меньше контейнера */
-  bottom: 50px;
-  right: 0;
-  border-radius: 24px;
   background-color: #DDF0A7;
 }
 
 @media (max-width: 1280px) {
   .speed-block__label-image {
-    padding: calc(8px + 16 * ((100vw - 320px) / 960));
+    padding: calc(12px + 12 * ((100vw - 320px) / 960));
   }
 }
 
-@media (max-width: 1280px) {
+@media (min-width: 552.2px) {
   .speed-block__label-image {
-    margin-right: calc(-20px + -30 * ((100vw - 320px) / 960));
+    /* Если меньше контейнера */
+    margin-right: -50px;
+    /* Если меньше контейнера */
+    max-width: 420px;
+    border-radius: 24px;
+    /* Если меньше контейнера */
+    bottom: 50px;
   }
 }
 
-@media (max-width: 1280px) {
+@media (min-width: 552.2px) and (max-width: 1280px) {
+  .speed-block__label-image {
+    margin-right: calc(-10px + -40 * ((100vw - 320px) / 960));
+  }
+}
+
+@media (min-width: 552.2px) and (max-width: 1280px) {
   .speed-block__label-image {
     max-width: calc(120px + 300 * ((100vw - 320px) / 960));
   }
 }
 
-@media (max-width: 1280px) {
+@media (min-width: 552.2px) and (max-width: 1280px) {
   .speed-block__label-image {
-    bottom: calc(20px + 30 * ((100vw - 320px) / 960));
+    bottom: calc(10px + 40 * ((100vw - 320px) / 960));
+  }
+}
+
+@media (max-width: 552.2px) {
+  .speed-block__label-image {
+    max-width: 180px;
+    border-radius: 18px;
+    right: 20px;
+    bottom: -20px;
   }
 }
 
 .speed-block__right {
-  /* Если меньше контейнера */
-  max-width: 600px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-@media (max-width: 1280px) {
+@media (min-width: 552.2px) {
   .speed-block__right {
-    max-width: calc(200px + 400 * ((100vw - 320px) / 960));
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    /* Если меньше контейнера */
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 552.2px) and (max-width: 1280px) {
+  .speed-block__right {
+    max-width: calc(150px + 450 * ((100vw - 320px) / 960));
+  }
+}
+
+@media (max-width: 552.2px) {
+  .speed-block__right {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -1517,7 +1566,7 @@ body._lock-scroll {
 
 @media (max-width: 1280px) {
   .speed-label__percent {
-    line-height: calc(22px + 20 * ((100vw - 320px) / 960));
+    line-height: calc(16px + 26 * ((100vw - 320px) / 960));
   }
 }
 
@@ -1533,7 +1582,7 @@ body._lock-scroll {
 
 @media (max-width: 1280px) {
   .speed-label__text {
-    font-size: calc(8px + 12 * ((100vw - 320px) / 960));
+    font-size: calc(9px + 11 * ((100vw - 320px) / 960));
   }
 }
 
@@ -1543,19 +1592,27 @@ body._lock-scroll {
   }
 }
 
-.speed-label__icon {
-  /* Если меньше контейнера */
-  max-width: 72px;
+.speed-label__icon img {
+  max-width: 100%;
 }
 
-@media (max-width: 1280px) {
+@media (min-width: 552.2px) {
   .speed-label__icon {
-    max-width: calc(32px + 40 * ((100vw - 320px) / 960));
+    /* Если меньше контейнера */
+    max-width: 72px;
   }
 }
 
-.speed-label__icon img {
-  max-width: 100%;
+@media (min-width: 552.2px) and (max-width: 1280px) {
+  .speed-label__icon {
+    max-width: calc(15px + 57 * ((100vw - 320px) / 960));
+  }
+}
+
+@media (max-width: 552.2px) {
+  .speed-label__icon {
+    max-width: 32px;
+  }
 }
 
 .speed-right__label {
@@ -1584,7 +1641,7 @@ body._lock-scroll {
 
 @media (max-width: 1280px) {
   .speed-right__label {
-    margin-bottom: calc(10px + 5 * ((100vw - 320px) / 960));
+    margin-bottom: calc(5px + 10 * ((100vw - 320px) / 960));
   }
 }
 
@@ -1607,7 +1664,7 @@ body._lock-scroll {
 
 @media (max-width: 1280px) {
   .speed-right__title {
-    margin-bottom: calc(17px + 10 * ((100vw - 320px) / 960));
+    margin-bottom: calc(12px + 15 * ((100vw - 320px) / 960));
   }
 }
 
