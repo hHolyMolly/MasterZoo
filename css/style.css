@@ -724,7 +724,7 @@ body._lock-scroll {
 
 @media (max-width: 768.2px) {
   .header-menu__items {
-    row-gap: 10px;
+    row-gap: 15px;
   }
 }
 
@@ -754,8 +754,8 @@ body._lock-scroll {
 
 @media (max-width: 768.2px) {
   .header-menu__list {
-    margin-bottom: 20px;
-    row-gap: 20px;
+    margin-bottom: 15px;
+    row-gap: 30px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -773,20 +773,36 @@ body._lock-scroll {
   position: relative;
 }
 
-.header-menu__item:before {
-  content: "";
-  width: 0%;
-  height: 1px;
-  position: absolute;
-  left: 0px;
-  bottom: -2px;
-  -webkit-transition: width 0.2s ease 0s;
-  transition: width 0.2s ease 0s;
-  background-color: #162E3C;
+@media (min-width: 768.2px) {
+  .header-menu__item:before {
+    content: "";
+    width: 0%;
+    height: 1px;
+    position: absolute;
+    left: 0px;
+    bottom: -2px;
+    -webkit-transition: width 0.2s ease 0s;
+    transition: width 0.2s ease 0s;
+    background-color: #162E3C;
+  }
+  .header-menu__item:hover:before {
+    width: 100%;
+  }
 }
 
-.header-menu__item:hover:before {
-  width: 100%;
+@media (max-width: 768.2px) {
+  .header-menu__item:not(:last-child):before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    bottom: -17px;
+    left: 50%;
+    border-radius: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    background-color: #fff;
+  }
 }
 
 .header-menu__item a {
@@ -860,6 +876,7 @@ body._lock-scroll {
 .main-block__title {
   /* Если меньше контейнера */
   margin-bottom: 25px;
+  background-color: #162e3c7c;
   text-align: center;
   font-family: 'Fraunces';
   /* Если меньше контейнера */
@@ -891,6 +908,7 @@ body._lock-scroll {
 .main-block__text {
   /* Если меньше контейнера */
   margin-bottom: 40px;
+  background-color: #162e3c7c;
   text-align: center;
   font-family: 'Space Grotesk';
   /* Если меньше контейнера */
@@ -1026,8 +1044,10 @@ body._lock-scroll {
   }
 }
 
-.main-block__first-btn:hover {
-  background-color: #c7db90;
+@media (min-width: 768.2px) {
+  .main-block__first-btn:hover {
+    background-color: #c7db90;
+  }
 }
 
 .main-block__second-btn {
@@ -1039,7 +1059,7 @@ body._lock-scroll {
           align-items: center;
   -webkit-transition: color .2s ease .0s;
   transition: color .2s ease .0s;
-  background-color: transparent;
+  background-color: #162e3c7c;
   white-space: nowrap;
   font-family: 'Space Grotesk';
   /* Если меньше контейнера */
@@ -1062,8 +1082,10 @@ body._lock-scroll {
   }
 }
 
-.main-block__second-btn:hover {
-  color: #bebebe;
+@media (min-width: 768.2px) {
+  .main-block__second-btn:hover {
+    color: #bebebe;
+  }
 }
 
 .main-block__second-btn ._icon-arrow-btn {
@@ -1118,8 +1140,10 @@ body._lock-scroll {
   color: #fff;
 }
 
-.main-block__icon:hover {
-  color: #bebebe;
+@media (min-width: 768.2px) {
+  .main-block__icon:hover {
+    color: #bebebe;
+  }
 }
 
 @media (max-width: 768.2px) {
@@ -1158,13 +1182,13 @@ body._lock-scroll {
 
 @media (max-width: 1280px) {
   .main-block-e__item_01 {
-    top: calc(40px + 60 * ((100vw - 320px) / 960));
+    top: calc(60px + 40 * ((100vw - 320px) / 960));
   }
 }
 
 @media (max-width: 1280px) {
   .main-block-e__item_01 {
-    left: calc(-20px + 20 * ((100vw - 320px) / 960));
+    left: calc(-30px + 30 * ((100vw - 320px) / 960));
   }
 }
 
@@ -1191,7 +1215,7 @@ body._lock-scroll {
 
 @media (max-width: 1280px) {
   .main-block-e__item_02 {
-    right: calc(-10px + 10 * ((100vw - 320px) / 960));
+    right: calc(-20px + 20 * ((100vw - 320px) / 960));
   }
 }
 
