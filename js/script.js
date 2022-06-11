@@ -255,7 +255,7 @@ function videoPause() {
   videoBtn.addEventListener("click", function () {
     if (videoItem.paused) {
       videoItem.play();
-
+      videoItem.controls = true;
       videoBtn.style.display = "none";
     }
   });
