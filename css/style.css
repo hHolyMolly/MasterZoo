@@ -876,7 +876,6 @@ body._lock-scroll {
 .main-block__title {
   /* Если меньше контейнера */
   margin-bottom: 25px;
-  background-color: #162e3c7c;
   text-align: center;
   font-family: 'Fraunces';
   /* Если меньше контейнера */
@@ -908,7 +907,6 @@ body._lock-scroll {
 .main-block__text {
   /* Если меньше контейнера */
   margin-bottom: 40px;
-  background-color: #162e3c7c;
   text-align: center;
   font-family: 'Space Grotesk';
   /* Если меньше контейнера */
@@ -1059,7 +1057,6 @@ body._lock-scroll {
           align-items: center;
   -webkit-transition: color .2s ease .0s;
   transition: color .2s ease .0s;
-  background-color: #162e3c7c;
   white-space: nowrap;
   font-family: 'Space Grotesk';
   /* Если меньше контейнера */
