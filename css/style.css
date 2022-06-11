@@ -1057,6 +1057,7 @@ body._lock-scroll {
           align-items: center;
   -webkit-transition: color .2s ease .0s;
   transition: color .2s ease .0s;
+  background-color: transparent;
   white-space: nowrap;
   font-family: 'Space Grotesk';
   /* Если меньше контейнера */
@@ -1121,7 +1122,7 @@ body._lock-scroll {
   }
 }
 
-@media (max-width: 480.2px) {
+@media (max-width: 375.2px) {
   .main-block__icons {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1133,8 +1134,15 @@ body._lock-scroll {
 .main-block__icon {
   -webkit-transition: color .2s ease .0s;
   transition: color .2s ease .0s;
+  /* Если меньше контейнера */
   font-size: 35px;
   color: #fff;
+}
+
+@media (max-width: 1280px) {
+  .main-block__icon {
+    font-size: calc(22px + 13 * ((100vw - 320px) / 960));
+  }
 }
 
 @media (min-width: 768.2px) {
