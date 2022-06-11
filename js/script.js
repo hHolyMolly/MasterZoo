@@ -245,6 +245,23 @@ function myDinamicAdapt() {
 }
 myDinamicAdapt()
 
+//< " ВКЛЮЧЕНИЕ ВИДЕО ПО КНОПКЕ " >=============================================================================================================>//
+function videoPause() {
+  const videoBtn = document.querySelector(".watch-block__btn");
+  const videoItem = document.querySelector(".watch-block__video");
+
+  videoBtn.style.display = "block";
+
+  videoBtn.addEventListener("click", function () {
+    if (videoItem.paused) {
+      videoItem.play();
+
+      videoBtn.style.display = "none";
+    }
+  });
+}
+videoPause()
+
 /*
 
 //< " КАСТОМНЫЙ СЕЛЕКТ " >=============================================================================================================>//
