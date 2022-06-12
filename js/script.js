@@ -23,7 +23,8 @@ function showMenu() {
     }
 
     if (!elementTarget.closest(".header-menu") && menuBody.classList.contains("_active") ||
-      window.innerWidth < 768.2 && elementTarget.closest(".header-menu__item")) {
+      window.innerWidth < 768.2 && elementTarget.closest(".header-menu__item")
+      || menuBody.classList.contains("_active") && elementTarget.closest(".popup-open")) {
       menuBody.classList.remove("_active");
       body.classList.remove("_lock-scroll");
     }
