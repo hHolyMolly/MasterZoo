@@ -241,12 +241,13 @@ body._lock-scroll {
   background-color: #DDF0A7;
 }
 
-.banner__close:hover {
-  background-color: #d0e49b;
-}
-
-.banner__close:active {
-  background-color: #c7db91;
+@media (min-width: 768.2px) {
+  .banner__close:hover {
+    background-color: #d0e49b;
+  }
+  .banner__close:active {
+    background-color: #c7db91;
+  }
 }
 
 .banner__close span {
@@ -2254,6 +2255,361 @@ body._lock-scroll {
 @media (max-width: 1280px) {
   .building-column__text {
     line-height: calc(16px + 8 * ((100vw - 320px) / 960));
+  }
+}
+
+.popup {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1100;
+  pointer-events: none;
+}
+
+.popup._active {
+  pointer-events: auto;
+}
+
+.popup._active .popup__wrapper {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.popup._active .popup__body {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.popup__wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease 0s;
+  transition: opacity 0.4s ease 0s;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup__body {
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.5s ease 0.1s, -webkit-transform 0.5s ease 0.1s;
+  transition: opacity 0.5s ease 0.1s, -webkit-transform 0.5s ease 0.1s;
+  transition: transform 0.5s ease 0.1s, opacity 0.5s ease 0.1s;
+  transition: transform 0.5s ease 0.1s, opacity 0.5s ease 0.1s, -webkit-transform 0.5s ease 0.1s;
+  -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.541);
+          box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.541);
+  background-color: #DDF0A7;
+}
+
+@media (max-width: 768.2px) {
+  .popup__body {
+    height: 100%;
+  }
+}
+
+@media (min-width: 768.2px) {
+  .popup__body {
+    max-width: 450px;
+    border-radius: 6px;
+  }
+}
+
+.popup__top {
+  padding: 10px 15px;
+  min-height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #162E3C;
+}
+
+.popup__content {
+  padding: 20px 15px;
+  min-height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 768.2px) {
+  .popup__content {
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width: 768.2px) {
+  .popup__content {
+    padding: 20px 15px;
+  }
+}
+
+.popup-top__title {
+  font-family: 'Space Grotesk';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #fff;
+}
+
+.popup-top__close {
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+  border-radius: 50%;
+  -webkit-transition: background-color .3s ease .0s;
+  transition: background-color .3s ease .0s;
+  background-color: #162E3C;
+}
+
+@media (min-width: 768.2px) {
+  .popup-top__close:hover {
+    background-color: #1c3949;
+  }
+  .popup-top__close:active {
+    background-color: #234557;
+  }
+}
+
+.popup-top__close span {
+  width: 16px;
+  height: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  background-color: transparent;
+}
+
+.popup-top__close span:before, .popup-top__close span:after {
+  content: "";
+  width: 16px;
+  height: 2px;
+  position: absolute;
+  -webkit-transition: top 0.2s ease-in-out 0s, -webkit-transform 0.2s ease-in-out 0s;
+  transition: top 0.2s ease-in-out 0s, -webkit-transform 0.2s ease-in-out 0s;
+  transition: top 0.2s ease-in-out 0s, transform 0.2s ease-in-out 0s;
+  transition: top 0.2s ease-in-out 0s, transform 0.2s ease-in-out 0s, -webkit-transform 0.2s ease-in-out 0s;
+  background-color: #fff;
+}
+
+.popup-top__close span:before {
+  top: -8px;
+  -webkit-transform: rotate(45deg) translate(5px, 6px);
+          transform: rotate(45deg) translate(5px, 6px);
+}
+
+.popup-top__close span:after {
+  top: 8px;
+  -webkit-transform: rotate(-45deg) translate(5px, -6px);
+          transform: rotate(-45deg) translate(5px, -6px);
+}
+
+.popup-content__form {
+  width: 100%;
+  row-gap: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup-content__item {
+  width: 100%;
+}
+
+.popup-content__container-input {
+  width: 100%;
+  min-height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #162E3C;
+  background-color: transparent;
+}
+
+.popup-content__label {
+  margin-bottom: 10px;
+  font-family: 'Space Grotesk';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #162E3C;
+}
+
+.popup-content__input {
+  padding: 0px 10px;
+  width: 100%;
+  position: relative;
+  background-color: transparent;
+}
+
+.popup-content__buttons {
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup-content__btn-login {
+  padding: 0px 25px;
+  width: 100%;
+  min-height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  border-radius: 64px;
+  -webkit-transition: background-color .3s ease .0s;
+  transition: background-color .3s ease .0s;
+  border: 2px solid #162E3C;
+  background-color: #162E3C;
+  white-space: nowrap;
+  font-family: 'Space Grotesk';
+  /* Если меньше контейнера */
+  font-size: 15px;
+  font-weight: 700;
+  /* Если меньше контейнера */
+  line-height: 24px;
+  color: #fff;
+}
+
+@media (max-width: 1280px) {
+  .popup-content__btn-login {
+    font-size: calc(14px + 1 * ((100vw - 320px) / 960));
+  }
+}
+
+@media (max-width: 1280px) {
+  .popup-content__btn-login {
+    line-height: calc(18px + 6 * ((100vw - 320px) / 960));
+  }
+}
+
+@media (min-width: 768.2px) {
+  .popup-content__btn-login:hover {
+    background-color: transparent;
+    color: #162E3C;
+  }
+}
+
+.popup-content__btn-register {
+  padding: 0px 15px;
+  width: 100%;
+  min-height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  border-radius: 64px;
+  -webkit-transition: background-color .3s ease .0s, color .3s ease .0s;
+  transition: background-color .3s ease .0s, color .3s ease .0s;
+  border: 2px solid #162E3C;
+  background-color: transparent;
+  white-space: nowrap;
+  font-family: 'Space Grotesk';
+  /* Если меньше контейнера */
+  font-size: 15px;
+  font-weight: 700;
+  /* Если меньше контейнера */
+  line-height: 24px;
+  color: #162E3C;
+}
+
+@media (max-width: 1280px) {
+  .popup-content__btn-register {
+    font-size: calc(14px + 1 * ((100vw - 320px) / 960));
+  }
+}
+
+@media (max-width: 1280px) {
+  .popup-content__btn-register {
+    line-height: calc(18px + 6 * ((100vw - 320px) / 960));
+  }
+}
+
+@media (min-width: 768.2px) {
+  .popup-content__btn-register:hover {
+    background-color: #162E3C;
+    color: #fff;
   }
 }
 

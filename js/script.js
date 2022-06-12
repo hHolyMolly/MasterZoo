@@ -262,6 +262,36 @@ function videoPause() {
 }
 videoPause()
 
+//< " ПОПАП " >=============================================================================================================>//
+function showPopUP() {
+  const popupWrapper = document.querySelector(".popup");
+  const popupLinks = document.querySelectorAll(".popup-open");
+  const body = document.body;
+
+  if (popupLinks.length > 0) {
+    for (let index = 0; index < popupLinks.length; index++) {
+      const popupLink = popupLinks[index];
+
+      popupLink.addEventListener("click", function () {
+        popupWrapper.classList.add("_active");
+        body.classList.add("_lock-scroll");
+      });
+    }
+  }
+
+  if (popupWrapper) {
+    document.addEventListener("click", function (e) {
+      const elementTarget = e.target;
+
+      if (elementTarget.closest(".popup__wrapper") || elementTarget.closest(".popup-top__close")) {
+        popupWrapper.classList.remove("_active");
+        body.classList.remove("_lock-scroll");
+      }
+    });
+  }
+}
+showPopUP()
+
 /*
 
 //< " КАСТОМНЫЙ СЕЛЕКТ " >=============================================================================================================>//
