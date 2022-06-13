@@ -39,43 +39,16 @@ showMenu()
 function scrollHeader() {
   const header = document.querySelector(".header");
 
-  const scrollValue = 200; // Когда добавляем класс.
-  const scrollDelay = 200; // Задержка перед анимацией.
+  const scrollValue = 100;
 
   if (window.innerWidth > 768.2) {
-    // Условие если скролл больше scrollValue
-    const addClassOnScroll = function () {
-      if (!header.classList.contains("_scroll")) {
-        header.classList.add("_scroll-animation")
-
-        if (header.classList.contains("_scroll-animation")) {
-          setTimeout(function () {
-            header.classList.add("_scroll");
-          }, scrollDelay);
-        }
+    window.addEventListener("scroll", function () {
+      if (window.pageYOffset > scrollValue) {
+        header.classList.add("_scroll");
       } else {
-        header.classList.remove("_scroll-animation");
-      }
-    };
-    // Условие если скролл меньше scrollValue
-    const removeClassOnScroll = function () {
-      if (header.classList.contains("_scroll")) {
         header.classList.remove("_scroll");
       }
-
-      if (header.classList.contains("_scroll-animation")) {
-        header.classList.remove("_scroll-animation");
-      }
-    };
-    // Вешаем событие scroll и добавляем наши условия
-    window.addEventListener("scroll", function () {
-      if (window.scrollY > scrollValue || window.scrollY === scrollValue) {
-        addClassOnScroll()
-      } else {
-        removeClassOnScroll()
-      }
     });
-
   }
 }
 scrollHeader()

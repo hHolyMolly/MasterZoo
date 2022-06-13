@@ -296,20 +296,30 @@ body._lock-scroll {
 }
 
 @media (min-width: 768.2px) {
-  .header._scroll-animation {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
   .header._scroll {
-    width: 100vw;
+    width: 100%;
     position: fixed;
     top: 0;
-    left: 0;
-    z-index: 200;
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-    -webkit-box-shadow: 0px 0px 6px 1px #9c9c9c;
-            box-shadow: 0px 0px 6px 1px #9c9c9c;
+    -webkit-animation-name: scroll;
+            animation-name: scroll;
+    -webkit-animation-duration: 0.6s;
+            animation-duration: 0.6s;
+  }
+  @-webkit-keyframes scroll {
+    0% {
+      top: -70px;
+    }
+    100% {
+      top: 0;
+    }
+  }
+  @keyframes scroll {
+    0% {
+      top: -70px;
+    }
+    100% {
+      top: 0;
+    }
   }
 }
 
@@ -1603,13 +1613,13 @@ body._lock-scroll {
 
 @media (max-width: 1280px) {
   .speed-label__percent {
-    font-size: calc(12px + 20 * ((100vw - 320px) / 960));
+    font-size: calc(14px + 18 * ((100vw - 320px) / 960));
   }
 }
 
 @media (max-width: 1280px) {
   .speed-label__percent {
-    line-height: calc(16px + 26 * ((100vw - 320px) / 960));
+    line-height: calc(18px + 24 * ((100vw - 320px) / 960));
   }
 }
 
@@ -1625,13 +1635,13 @@ body._lock-scroll {
 
 @media (max-width: 1280px) {
   .speed-label__text {
-    font-size: calc(9px + 11 * ((100vw - 320px) / 960));
+    font-size: calc(12px + 8 * ((100vw - 320px) / 960));
   }
 }
 
 @media (max-width: 1280px) {
   .speed-label__text {
-    line-height: calc(14px + 16 * ((100vw - 320px) / 960));
+    line-height: calc(16px + 14 * ((100vw - 320px) / 960));
   }
 }
 
@@ -2871,13 +2881,13 @@ body._lock-scroll {
 
 @media (max-width: 1280px) {
   .efficient-label__percent {
-    font-size: calc(12px + 20 * ((100vw - 320px) / 960));
+    font-size: calc(14px + 18 * ((100vw - 320px) / 960));
   }
 }
 
 @media (max-width: 1280px) {
   .efficient-label__percent {
-    line-height: calc(16px + 26 * ((100vw - 320px) / 960));
+    line-height: calc(18px + 24 * ((100vw - 320px) / 960));
   }
 }
 
@@ -2893,13 +2903,13 @@ body._lock-scroll {
 
 @media (max-width: 1280px) {
   .efficient-label__text {
-    font-size: calc(9px + 11 * ((100vw - 320px) / 960));
+    font-size: calc(12px + 8 * ((100vw - 320px) / 960));
   }
 }
 
 @media (max-width: 1280px) {
   .efficient-label__text {
-    line-height: calc(14px + 16 * ((100vw - 320px) / 960));
+    line-height: calc(16px + 14 * ((100vw - 320px) / 960));
   }
 }
 
