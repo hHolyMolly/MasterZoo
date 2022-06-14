@@ -55,7 +55,7 @@ scrollHeader()
 
 //< " ПРОКРУТКА К БЛОКУ " >=============================================================================================================>//
 function scrollToBlock() {
-  document.querySelectorAll('.header-menu__item[href^="#"').forEach((link) => {
+  document.querySelectorAll('.header-menu__item a[href^="#"').forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
 
@@ -63,7 +63,7 @@ function scrollToBlock() {
 
       const scrollTarget = document.getElementById(href);
 
-      const topOffset = 100;
+      const topOffset = 70;
       const elementPosition = scrollTarget.getBoundingClientRect().top;
       const offsetPosition = elementPosition - topOffset;
 
