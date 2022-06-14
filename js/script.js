@@ -55,7 +55,7 @@ scrollHeader()
 
 //< " ПРОКРУТКА К БЛОКУ " >=============================================================================================================>//
 function scrollToBlock() {
-  document.querySelectorAll('.header-menu__item a[href^="#"').forEach((link) => {
+  document.querySelectorAll('._scroll-to-block a[href^="#"').forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
 
@@ -268,6 +268,25 @@ function showPopUP() {
   }
 }
 showPopUP()
+
+//< " ФУТЕР СПОЙЛЕР НА 768.2ПХ " >=============================================================================================================>//
+function showSpoilerFooter() {
+  const footerSpoilerBtns = document.querySelectorAll(".footer-menu__title");
+
+  if (window.innerWidth < 768.2) {
+    if (footerSpoilerBtns.length > 0) {
+      for (let index = 0; index < footerSpoilerBtns.length; index++) {
+        const footerSpoilerBtn = footerSpoilerBtns[index];
+
+        footerSpoilerBtn.addEventListener("click", function () {
+          footerSpoilerBtn.parentElement.classList.toggle("_active");
+        });
+
+      }
+    }
+  }
+}
+showSpoilerFooter()
 
 /*
 
