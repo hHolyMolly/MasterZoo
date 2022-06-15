@@ -2359,7 +2359,7 @@ body._lock-scroll {
   font-weight: 400;
   /* Если меньше контейнера */
   line-height: 28px;
-  color: #DDF0A7;
+  color: #fff;
 }
 
 @media (max-width: 1280px) {
@@ -2388,7 +2388,7 @@ body._lock-scroll {
   font-weight: 400;
   /* Если меньше контейнера */
   line-height: 24px;
-  color: #DDF0A7;
+  color: #fff;
 }
 
 @media (max-width: 1280px) {
