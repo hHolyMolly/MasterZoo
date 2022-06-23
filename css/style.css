@@ -89,6 +89,11 @@ h6 {
   font-weight: 400;
 }
 
+input {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
 ._title {
   font-family: 'Fraunces';
   /* Если меньше контейнера */
@@ -285,6 +290,7 @@ body._lock-scroll {
 }
 
 .header {
+  min-height: 70px;
   position: relative;
   z-index: 200;
   overflow: hidden;
@@ -296,7 +302,7 @@ body._lock-scroll {
 }
 
 @media (min-width: 768.2px) {
-  .header._scroll {
+  .header._scroll .header__wrapper {
     width: 100%;
     position: fixed;
     top: 0;

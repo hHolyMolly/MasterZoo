@@ -273,16 +273,17 @@ showPopUP()
 function showSpoilerFooter() {
   const footerSpoilerBtns = document.querySelectorAll(".footer-menu__title");
 
-  if (window.innerWidth < 768.2) {
-    if (footerSpoilerBtns.length > 0) {
-      for (let index = 0; index < footerSpoilerBtns.length; index++) {
-        const footerSpoilerBtn = footerSpoilerBtns[index];
+  if (footerSpoilerBtns.length > 0) {
+    for (let index = 0; index < footerSpoilerBtns.length; index++) {
+      const footerSpoilerBtn = footerSpoilerBtns[index];
 
-        footerSpoilerBtn.addEventListener("click", function () {
+      footerSpoilerBtn.addEventListener("click", function () {
+
+        if (window.innerWidth < 768.2) {
           footerSpoilerBtn.parentElement.classList.toggle("_active");
-        });
+        }
+      });
 
-      }
     }
   }
 }
