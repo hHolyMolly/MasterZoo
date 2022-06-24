@@ -39,7 +39,7 @@ showMenu()
 function scrollHeader() {
   const header = document.querySelector(".header");
 
-  const scrollValue = 100;
+  const scrollValue = 150;
 
   if (window.innerWidth > 768.2) {
     window.addEventListener("scroll", function () {
