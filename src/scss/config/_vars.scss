@@ -1,0 +1,27 @@
+//< " ПЕРЕМЕННЫЕ " >=============================================================================================================>//
+
+// ОБЩИЕ НАСТРОЙКИ СТРАНИЦЫ
+$minWidth: 320;
+$maxWidth: 1920;
+$maxWidthContainer: 670;
+$containerPadding: 30;
+
+:root {
+   // БРЕЙКПОИНТЫ
+   --header-mobile: 991.98px;
+
+   // ЦВЕТА
+   --color-white: #ffffff;
+   --color-dark: #242424;
+
+   --color-grey: #dfcce6;
+   --color-purple: #763cbc;
+
+   --color-main: #1cb600;
+   --color-main-second: #c3e66c;
+
+   --color-selection: #acf79e;
+
+   --background-page: #dfcce6;
+   --font-family: "Proxima Soft";
+}

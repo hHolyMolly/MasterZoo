@@ -1,0 +1,77 @@
+<section class="action" data-section-action>
+  <div class="_container">
+    <div class="action__inner">
+      <form class="action__body" data-main-form>
+        <div class="action__logo">
+          <img src="./img/logo.svg" loading="lazy" alt="MasterZoo" />
+        </div>
+        <h1 class="action__title">Підкажіть, будь ласка, чому ви не забрати своє замовлення</h1>
+        <div class="action__items action-items">
+          <div class="action-items__row action-items__first action-first" data-form-step="1">
+            <h3 class="action-first__title">Позначте, будь ласка, свій варіант</h3>
+            <div class="action-first__columns">
+              <div class="action-first__option">
+                <label class="action-first__item">
+                  <input class="action-first__input" name="option" value="не дочекався підтвердження, довго опрацьовували" type="radio" hidden />
+                  <span class="action-first__elem" data-comment-variant="1">не дочекався підтвердження, довго опрацьовували</span>
+                </label>
+              </div>
+              <div class="action-first__option">
+                <label class="action-first__item">
+                  <input class="action-first__input" name="option" value="не отримав смс-запрошення" type="radio" hidden />
+                  <span class="action-first__elem" data-comment-variant="1">не отримав смс-запрошення</span>
+                </label>
+              </div>
+              <div class="action-first__option">
+                <label class="action-first__item">
+                  <input class="action-first__input" name="option" value="купив необхідне в іншому місці" type="radio" hidden />
+                  <span class="action-first__elem" data-comment-variant="1">купив необхідне в іншому місці</span>
+                </label>
+              </div>
+              <div class="action-first__option">
+                <label class="action-first__item">
+                  <input class="action-first__input" name="option" value="змінились плани" type="radio" hidden />
+                  <span class="action-first__elem" data-comment-variant="1">змінились плани</span>
+                </label>
+              </div>
+              <div class="action-first__option">
+                <label class="action-first__item">
+                  <input class="action-first__input" name="option" value="знайшов дешевше" type="radio" hidden />
+                  <span class="action-first__elem" data-comment-variant="1">знайшов дешевше</span>
+                </label>
+              </div>
+              <div class="action-first__option">
+                <label class="action-first__item">
+                  <input class="action-first__input" name="option" value="товар не відповідав опису на сайті" type="radio" hidden />
+                  <span class="action-first__elem" data-comment-variant="1">товар не відповідав опису на сайті</span>
+                </label>
+              </div>
+              <div class="action-first__option">
+                <label class="action-first__item">
+                  <input class="action-first__input" name="option" value="інший варіант" type="radio" hidden />
+                  <span class="action-first__elem" data-comment-variant="2">інший варіант</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="action-items__row action-items__second action-second" data-form-step="2">
+            <div class="action-second__option">
+              <h3 class="action-second__title">
+                <span style="display: block" data-comment-text="1">Є що додати? Залишай свій коментар і ми обов'язково його розглянемо</span>
+                <span style="display: none" data-comment-text="2">Чекаємо на твій варіант тут</span>
+              </h3>
+              <textarea class="action-first__textarea" data-form-message maxlength="360" name="message"></textarea>
+            </div>
+          </div>
+        </div>
+        <input class="action__send" data-form-send style="display: none" type="submit" value="ВІДПРАВИТИ" />
+      </form>
+      <div class="action__element">
+        <picture>
+          <source srcset="./img/sections/action/element.webp" type="image/webp" />
+          <img src="./img/sections/action/element.png" alt="догі на фоні" />
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
