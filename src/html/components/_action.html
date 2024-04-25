@@ -1,0 +1,121 @@
+<section class="action" data-section-action>
+  <div class="_container">
+    <div class="action__inner">
+      <div class="action__body">
+        <div class="action__logo">
+          <img src="./img/logo.svg" loading="lazy" alt="MasterZoo" />
+        </div>
+        <h1 class="action__title">
+          Шкода, що ти вирішив <br />
+          відписатися <br />
+          від нашої розсилки
+        </h1>
+        <form class="action__form-parent" data-main-form>
+          <div class="action__items action-items">
+            <div class="action-items__row action-items__first action-first">
+              <h3 class="action-first__title">Але можеш дати нам другий шанс та самостійно вибрати цікаві для тебе теми:</h3>
+              <div class="action-first__el">
+                <p class="checkbox-item">
+                  <input id="option 1" type="checkbox" name="categories[]" value="розпродажі та акції" />
+                  <label for="option 1">розпродажі та акції</label>
+                </p>
+
+                <p class="checkbox-item">
+                  <input id="option 2" type="checkbox" name="categories[]" value="благодійні проекти" />
+                  <label for="option 2">благодійні проекти</label>
+                </p>
+
+                <p class="checkbox-item">
+                  <input id="option 3" type="checkbox" name="categories[]" value="поради по догляду за улюбленцем" />
+                  <label for="option 3">
+                    поради по догляду <br />
+                    за улюбленцем
+                  </label>
+                </p>
+
+                <p class="checkbox-item">
+                  <input id="option 4" type="checkbox" name="categories[]" value="новинки в асортименті магазину" />
+                  <label for="option 4">
+                    новинки в асортименті <br />
+                    магазину
+                  </label>
+                </p>
+
+                <p class="checkbox-item">
+                  <input id="option 5" type="checkbox" name="categories[]" value="конкурси з подарунками та промокодами" />
+                  <label for="option 5">
+                    конкурси з подарунками <br />
+                    та промокодами
+                  </label>
+                </p>
+              </div>
+            </div>
+          </div>
+          <input class="action__send action__send_border" data-form-send style="display: none" type="submit" value="Оновити підписку" />
+        </form>
+        <form class="action__form-parent" data-main-form>
+          <div class="action__items action-items">
+            <div class="action-items__row action-items__first action-first">
+              <h3 class="action-first__title" style="max-width: 460px">Якщо хочеш відписатися, вкажи причину відписки аби ми змогли зробити її кращою:</h3>
+              <div class="action-first__columns-wrapper">
+                <div class="action-first__columns">
+                  <div class="action-first__option">
+                    <label class="action-first__item">
+                      <input class="action-first__input" name="unsubscribe" value="більше не актуально для мене" type="radio" hidden />
+                      <span class="action-first__elem action-first__elem_radio">
+                        більше не актуально <br />
+                        для мене
+                      </span>
+                    </label>
+                  </div>
+                  <div class="action-first__option">
+                    <label class="action-first__item">
+                      <input class="action-first__input" name="unsubscribe" value="забагато листів" type="radio" hidden />
+                      <span class="action-first__elem action-first__elem_radio"> забагато листів </span>
+                    </label>
+                  </div>
+                  <div class="action-first__option">
+                    <label class="action-first__item">
+                      <input class="action-first__input" name="unsubscribe" value="рідко читаю пошту" type="radio" hidden />
+                      <span class="action-first__elem action-first__elem_radio"> рідко читаю пошту </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="action-first__columns">
+                  <div class="action-first__option">
+                    <label class="action-first__item">
+                      <input class="action-first__input" name="unsubscribe" value="я не підписувався (-лася) на розсилку" type="radio" hidden />
+                      <span class="action-first__elem action-first__elem_radio">
+                        я не підписувався (-лася) <br />
+                        на розсилку
+                      </span>
+                    </label>
+                  </div>
+                  <div class="action-first__option">
+                    <label class="action-first__item">
+                      <input class="action-first__input" name="unsubscribe" value="свій варіант" type="radio" hidden />
+                      <span class="action-first__elem action-first__elem_radio" data-comment-variant="1">свій варіант</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="action-items__row action-items__second action-second">
+              <div class="action-second__option" style="width: 100%; display: none; flex-direction: column" data-comment-text="1">
+                <h3 class="action-second__title">Чекаємо на твій варіант тут</h3>
+                <textarea class="action-first__textarea" data-form-message maxlength="360" name="message"></textarea>
+              </div>
+            </div>
+          </div>
+          <input class="action__send action__send_green" data-form-send style="display: none" type="submit" value="Відписатися" />
+        </form>
+      </div>
+      <div class="action__element">
+        <picture>
+          <source srcset="./img/sections/action/element.webp" type="image/webp" />
+          <img src="./img/sections/action/element.png" alt="догі на фоні" />
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>

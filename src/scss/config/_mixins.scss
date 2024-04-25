@@ -1,0 +1,23 @@
+//< " ОТЗЫВЧИВОЕ ЗНАЧЕНИЕ " >=============================================================================================================>//
+@mixin adaptiv-value($property, $startSize, $minSize, $type) {
+   $addSize: $startSize - $minSize;
+
+   @if $type==1 {
+      /* Если меньше контейнера */
+      #{$property}: $startSize + px;
+
+      @media (max-width: #{1539.98px}) {
+         #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{1539.98 - 320}));
+      }
+   } @else if $type==2 {
+      /* Если больше контейнера */
+      #{$property}: $startSize + px;
+
+      @media (min-width: #{1539.98px}) {
+         #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+      }
+   } @else {
+      /* Всегда */
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+   }
+}
