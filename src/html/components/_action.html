@@ -1,0 +1,146 @@
+<section class="action" data-section-action>
+  <div class="_container">
+    <div class="action__inner">
+      <form class="action__body" data-main-form>
+        <div class="action__logo">
+          <img src="./img/logo.svg" loading="lazy" alt="MasterZoo" />
+        </div>
+
+        <div class="action__items action-items">
+          <div class="action-items__row" data-form-step="1">
+            <h3 class="action-items__title">Як пройшла твоя остання покупка у нас?</h3>
+
+            <div class="action-items__first action-first">
+              <label class="action-first__elem">
+                <input class="action-first__input" type="radio" name="happy" value="погано" hidden />
+
+                <div class="action-first__item">
+                  <div class="action-first__image">
+                    <picture>
+                      <source srcset="./img/sections/action/01.webp" type="image/webp" />
+                      <img src="./img/sections/action/01.png" alt="погано" />
+                    </picture>
+                  </div>
+
+                  <div class="action-first__title">погано</div>
+                </div>
+              </label>
+
+              <label class="action-first__elem">
+                <input class="action-first__input" type="radio" name="happy" value="могло бути краще" hidden />
+
+                <div class="action-first__item">
+                  <div class="action-first__image">
+                    <picture>
+                      <source srcset="./img/sections/action/02.webp" type="image/webp" />
+                      <img src="./img/sections/action/02.png" alt="могло бути краще" />
+                    </picture>
+                  </div>
+
+                  <div class="action-first__title">могло бути краще</div>
+                </div>
+              </label>
+
+              <label class="action-first__elem">
+                <input class="action-first__input" type="radio" name="happy" value="чудово" hidden />
+
+                <div class="action-first__item">
+                  <div class="action-first__image">
+                    <picture>
+                      <source srcset="./img/sections/action/03.webp" type="image/webp" />
+                      <img src="./img/sections/action/03.png" alt="чудово" />
+                    </picture>
+                  </div>
+
+                  <div class="action-first__title">чудово</div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="action-items__row" data-form-step="2">
+            <h3 class="action-items__title">Чи готовий ти рекомендувати нас своїм друзям?</h3>
+
+            <div class="action-items__second action-second">
+              <div class="action-second__row">
+                <label class="action-second__item">
+                  <input class="action-second__input" name="rating" value="0" type="radio" hidden />
+                  <div class="action-second__button">0</div>
+                </label>
+
+                <label class="action-second__item">
+                  <input class="action-second__input" name="rating" value="1" type="radio" hidden />
+                  <div class="action-second__button">1</div>
+                </label>
+
+                <label class="action-second__item">
+                  <input class="action-second__input" name="rating" value="2" type="radio" hidden />
+                  <div class="action-second__button">2</div>
+                </label>
+
+                <label class="action-second__item">
+                  <input class="action-second__input" name="rating" value="3" type="radio" hidden />
+                  <div class="action-second__button">3</div>
+                </label>
+
+                <label class="action-second__item">
+                  <input class="action-second__input" name="rating" value="4" type="radio" hidden />
+                  <div class="action-second__button">4</div>
+                </label>
+
+                <label class="action-second__item">
+                  <input class="action-second__input" name="rating" value="5" type="radio" hidden />
+                  <div class="action-second__button">5</div>
+                </label>
+
+                <label class="action-second__item">
+                  <input class="action-second__input" name="rating" value="6" type="radio" hidden />
+                  <div class="action-second__button">6</div>
+                </label>
+
+                <label class="action-second__item">
+                  <input class="action-second__input" name="rating" value="7" type="radio" hidden />
+                  <div class="action-second__button">7</div>
+                </label>
+
+                <label class="action-second__item">
+                  <input class="action-second__input" name="rating" value="8" type="radio" hidden />
+                  <div class="action-second__button">8</div>
+                </label>
+
+                <label class="action-second__item">
+                  <input class="action-second__input" name="rating" value="9" type="radio" hidden />
+                  <div class="action-second__button">9</div>
+                </label>
+
+                <label class="action-second__item">
+                  <input class="action-second__input" name="rating" value="10" type="radio" hidden />
+                  <div class="action-second__button">10</div>
+                </label>
+              </div>
+              <p class="action-second__text">де 0 – нізащо не порекомендую, 10 – розкажу всім, які ви кльові</p>
+            </div>
+          </div>
+
+          <div class="action-items__row" data-form-step="3">
+            <h3 class="action-items__title">Що ми можемо покращити, щоб подобатись тобі більше?</h3>
+
+            <label class="action-items__third action-third">
+              <div class="action-third__title">Сміливіше!</div>
+              <textarea class="action-third__textarea" data-form-message maxlength="360" name="message"></textarea>
+            </label>
+          </div>
+        </div>
+
+        <input class="action__send" data-form-send style="display: none" type="submit" value="ВІДПРАВИТИ" />
+      </form>
+
+      <div class="action__element">
+        <picture>
+          <source srcset="./img/sections/action/element.webp" type="image/webp" />
+          <img src="./img/sections/action/element.png" alt="догі на фоні" />
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>

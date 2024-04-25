@@ -1,0 +1,196 @@
+.thanks {
+  @media (max-width: 1219.98px) {
+    @include adaptiv-value("margin-bottom", 100, 40, 1);
+  }
+
+  // .thanks__body
+
+  &__body {
+    @include adaptiv-value("padding", 25, 20, 1);
+    position: relative;
+    border-radius: 16px;
+    animation: animation-show-thanks 0.8s;
+    background: var(--color-main-second);
+
+    ::selection {
+      background-color: var(--color-main);
+    }
+
+    &:not(:last-child) {
+      @include adaptiv-value("margin-bottom", 65, 35, 1);
+    }
+  }
+
+  // .thanks__text
+
+  &__text {
+    @include adaptiv-value("font-size", 18, 16, 1);
+    font-weight: 500;
+    text-align: center;
+    color: var(--color-main);
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  // .thanks__title
+
+  &__title {
+    font-family: "Master Zoo";
+    @include adaptiv-value("font-size", 70, 44, 1);
+    font-weight: 400;
+    line-height: calc(64 / 70 * 100%);
+    text-align: center;
+    color: var(--color-main);
+
+    &:not(:last-child) {
+      @include adaptiv-value("margin-bottom", 75, 45, 1);
+    }
+  }
+
+  // .thanks__social
+
+  &__social {
+  }
+
+  // .thanks__navigation
+
+  &__navigation {
+    @include adaptiv-value("column-gap", 60, 20, 1);
+    row-gap: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  // .thanks__image
+
+  &__image {
+    @include adaptiv-value("width", 195, 145, 1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  // .thanks__element
+
+  &__element {
+    width: 350px;
+    position: absolute;
+    right: 150px;
+    bottom: 30px;
+    z-index: 2;
+
+    img {
+      max-width: 100%;
+    }
+
+    @media (max-width: 1919.98px) {
+      @include adaptiv-value("width", 350, 150, 0);
+      @include adaptiv-value("right", 150, -200, 0);
+    }
+
+    @media (max-width: 1219.98px) {
+      @include adaptiv-value("width", 220, 130, 1);
+      @include adaptiv-value("right", 100, 40, 1);
+      bottom: 10px;
+    }
+  }
+}
+
+.thanks-social {
+  // .thanks-social__title
+
+  &__title {
+    font-family: "Master Zoo";
+    @include adaptiv-value("font-size", 24, 22, 1);
+    font-weight: 400;
+    line-height: calc(20 / 24 * 100%);
+    text-align: center;
+    color: var(--color-main);
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  // .thanks-social__row
+
+  &__row {
+    @include adaptiv-value("column-gap", 35, 15, 1);
+    row-gap: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  // .thanks-social__icon
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+
+    img {
+      max-width: 100%;
+    }
+
+    @media (any-hover: hover) {
+      transition: transform 0.2s ease 0s;
+
+      &:hover {
+        transform: translateY(-3px);
+      }
+    }
+  }
+}
+
+.thanks-navigation {
+  // .thanks-navigation__item
+
+  &__item {
+  }
+
+  // .thanks-navigation__link
+
+  &__link {
+    font-family: "Master Zoo";
+    @include adaptiv-value("font-size", 40, 28, 1);
+    font-weight: 400;
+    line-height: calc(32 / 40 * 100%);
+    text-decoration: none;
+    color: var(--color-main-third);
+
+    @media (any-hover: hover) {
+      transition: color 0.2s ease 0s;
+
+      &:hover {
+        color: var(--color-main-second);
+      }
+    }
+  }
+}
+
+@keyframes animation-show-thanks {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
