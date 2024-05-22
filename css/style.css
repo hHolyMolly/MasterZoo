@@ -130,7 +130,7 @@ h6 {
   --color-main: #1cb600;
   --color-main-second: #c3e66c;
   --color-selection: #acf79e;
-  --background-page: #dfcce6;
+  --background-page: #c3e66c;
   --font-family: "Proxima Soft";
 }
 
@@ -198,23 +198,23 @@ section {
 
 @media (max-width: 1539.98px) and (min-width: 1219.98px) {
   .action ._container {
-    max-width: 580px;
+    max-width: 600px;
   }
 }
 @media (max-width: 1919.98px) {
   .action ._container {
     /* Если меньше контейнера */
-    max-width: 670px;
+    max-width: 700px;
   }
 }
 @media (max-width: 1919.98px) and (max-width: 1539.98px) {
   .action ._container {
-    max-width: calc(425px + 245 * (100vw - 320px) / 1219.98);
+    max-width: calc(425px + 275 * (100vw - 320px) / 1219.98);
   }
 }
 @media (max-width: 1219.98px) {
   .action {
-    padding-bottom: 200px;
+    padding-bottom: 300px;
   }
 }
 @media (min-width: 1919.98px) {
@@ -305,11 +305,11 @@ section {
 }
 .action__logo:not(:last-child) {
   /* Если меньше контейнера */
-  margin-bottom: 45px;
+  margin-bottom: 18px;
 }
 @media (max-width: 1539.98px) {
   .action__logo:not(:last-child) {
-    margin-bottom: calc(35px + 10 * (100vw - 320px) / 1219.98);
+    margin-bottom: calc(15px + 3 * (100vw - 320px) / 1219.98);
   }
 }
 @media (max-width: 1539.98px) and (min-width: 1219.98px) {
@@ -326,58 +326,12 @@ section {
 @media (max-width: 1539.98px) and (min-width: 1219.98px) {
   .action__logo:not(:last-child) {
     /* Если меньше контейнера */
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 1539.98px) and (min-width: 1219.98px) and (max-width: 1539.98px) {
   .action__logo:not(:last-child) {
-    margin-bottom: calc(20px + 10 * (100vw - 320px) / 1219.98);
-  }
-}
-.action__title {
-  font-family: "Master Zoo";
-  /* Если меньше контейнера */
-  font-size: 48px;
-  font-weight: 400;
-  line-height: 87.5%;
-  letter-spacing: 0.01em;
-  text-align: center;
-  color: var(--color-main);
-}
-@media (max-width: 1539.98px) {
-  .action__title {
-    font-size: calc(28px + 20 * (100vw - 320px) / 1219.98);
-  }
-}
-.action__title:not(:last-child) {
-  /* Если меньше контейнера */
-  margin-bottom: 30px;
-}
-@media (max-width: 1539.98px) {
-  .action__title:not(:last-child) {
-    margin-bottom: calc(20px + 10 * (100vw - 320px) / 1219.98);
-  }
-}
-@media (max-width: 1539.98px) and (min-width: 1219.98px) {
-  .action__title {
-    /* Если меньше контейнера */
-    font-size: 40px;
-  }
-}
-@media (max-width: 1539.98px) and (min-width: 1219.98px) and (max-width: 1539.98px) {
-  .action__title {
-    font-size: calc(-10px + 50 * (100vw - 320px) / 1219.98);
-  }
-}
-@media (max-width: 1539.98px) and (min-width: 1219.98px) {
-  .action__title:not(:last-child) {
-    /* Если меньше контейнера */
-    margin-bottom: 30px;
-  }
-}
-@media (max-width: 1539.98px) and (min-width: 1219.98px) and (max-width: 1539.98px) {
-  .action__title:not(:last-child) {
-    margin-bottom: calc(-20px + 50 * (100vw - 320px) / 1219.98);
+    margin-bottom: calc(5px + 5 * (100vw - 320px) / 1219.98);
   }
 }
 .action__items {
@@ -460,10 +414,10 @@ section {
   }
 }
 .action__element {
-  width: 540px;
+  width: 690px;
   position: absolute;
   left: 280px;
-  bottom: 60px;
+  bottom: 140px;
   z-index: 2;
 }
 .action__element img {
@@ -471,30 +425,30 @@ section {
 }
 @media (min-width: 1919.98px) {
   .action__element {
-    left: -350px;
-    bottom: -100px;
+    left: -480px;
+    bottom: -140px;
   }
 }
 @media (max-width: 1919.98px) {
   .action__element {
     /* Всегда */
-    width: calc(210px + 330 * (100vw - 320px) / 1600);
+    width: calc(220px + 470 * (100vw - 320px) / 1600);
     /* Всегда */
-    left: calc(-280px + 560 * (100vw - 320px) / 1600);
+    left: calc(-280px + 420 * (100vw - 320px) / 1600);
   }
 }
 @media (max-width: 1539.98px) and (min-width: 1219.98px) {
   .action__element {
     /* Всегда */
-    width: calc(80px + 400 * (100vw - 320px) / 1600);
+    width: calc(80px + 560 * (100vw - 320px) / 1600);
     /* Всегда */
-    left: calc(-120px + 420 * (100vw - 320px) / 1600);
+    left: calc(-120px + 260 * (100vw - 320px) / 1600);
   }
 }
 @media (max-width: 1219.98px) {
   .action__element {
     /* Если меньше контейнера */
-    width: 250px;
+    width: 350px;
     /* Если меньше контейнера */
     left: 140px;
     bottom: 6px;
@@ -502,12 +456,12 @@ section {
 }
 @media (max-width: 1219.98px) and (max-width: 1539.98px) {
   .action__element {
-    width: calc(200px + 50 * (100vw - 320px) / 1219.98);
+    width: calc(270px + 80 * (100vw - 320px) / 1219.98);
   }
 }
 @media (max-width: 1219.98px) and (max-width: 1539.98px) {
   .action__element {
-    left: calc(40px + 100 * (100vw - 320px) / 1219.98);
+    left: calc(30px + 110 * (100vw - 320px) / 1219.98);
   }
 }
 
@@ -529,7 +483,7 @@ section {
   /* Если меньше контейнера */
   top: -20px;
   left: 0;
-  background-color: var(--color-main);
+  background-color: var(--color-purple);
 }
 @media (max-width: 1539.98px) {
   .action-items__second:before {
@@ -540,11 +494,11 @@ section {
 .action-first__title {
   /* Если меньше контейнера */
   font-size: 20px;
-  font-weight: 500;
-  line-height: 100%;
+  font-weight: 400;
+  line-height: 110%;
   letter-spacing: 0.01em;
   text-align: center;
-  color: var(--color-main);
+  color: var(--color-purple);
 }
 @media (max-width: 1539.98px) {
   .action-first__title {
@@ -560,26 +514,26 @@ section {
     margin-bottom: calc(20px + 10 * (100vw - 320px) / 1219.98);
   }
 }
-@media (min-width: 1219.98px) and (max-width: 1539.98px) {
+@media (max-width: 1539.98px) and (min-width: 1219.98px) {
   .action-first__title {
     /* Если меньше контейнера */
-    font-size: 18px;
+    font-size: 16px;
   }
 }
-@media (min-width: 1219.98px) and (max-width: 1539.98px) and (max-width: 1539.98px) {
+@media (max-width: 1539.98px) and (min-width: 1219.98px) and (max-width: 1539.98px) {
   .action-first__title {
-    font-size: calc(4px + 14 * (100vw - 320px) / 1219.98);
+    font-size: calc(-4px + 20 * (100vw - 320px) / 1219.98);
   }
 }
-@media (min-width: 1219.98px) and (max-width: 1539.98px) {
+@media (max-width: 1539.98px) and (min-width: 1219.98px) {
   .action-first__title:not(:last-child) {
     /* Если меньше контейнера */
     margin-bottom: 30px;
   }
 }
-@media (min-width: 1219.98px) and (max-width: 1539.98px) and (max-width: 1539.98px) {
+@media (max-width: 1539.98px) and (min-width: 1219.98px) and (max-width: 1539.98px) {
   .action-first__title:not(:last-child) {
-    margin-bottom: calc(-40px + 70 * (100vw - 320px) / 1219.98);
+    margin-bottom: calc(-20px + 50 * (100vw - 320px) / 1219.98);
   }
 }
 .action-first__columns {
@@ -645,13 +599,13 @@ section {
   height: 14px;
   position: absolute;
   /* Если меньше контейнера */
-  top: 3px;
+  top: 4px;
   left: 0;
   border-radius: 50%;
 }
 @media (max-width: 1539.98px) {
   .action-first__elem:before, .action-first__elem:after {
-    top: calc(0px + 3 * (100vw - 320px) / 1219.98);
+    top: calc(0px + 4 * (100vw - 320px) / 1219.98);
   }
 }
 @media (max-width: 1539.98px) and (min-width: 1219.98px) {
@@ -675,18 +629,18 @@ section {
 }
 @media (max-width: 991.98px) and (max-width: 1539.98px) {
   .action-first__elem:before, .action-first__elem:after {
-    top: calc(-1px + 3 * (100vw - 320px) / 1219.98);
+    top: calc(-2px + 4 * (100vw - 320px) / 1219.98);
   }
 }
 .action-first__elem:before {
   cursor: pointer;
-  border: 1px solid var(--color-main);
+  border: 1px solid var(--color-purple);
 }
 .action-first__elem:after {
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.2s ease 0s;
-  background-color: var(--color-main);
+  background-color: var(--color-purple);
 }
 @media (max-width: 1539.98px) and (min-width: 1219.98px) {
   .action-first__elem {
@@ -707,7 +661,7 @@ section {
   width: 100%;
   max-height: 180px;
   height: 24px;
-  border-bottom: 1px solid var(--color-main);
+  border-bottom: 1px solid var(--color-purple);
   font-size: 16px;
 }
 @media (any-hover: hover) {
@@ -731,18 +685,26 @@ section {
 }
 .action-second__title {
   /* Если меньше контейнера */
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 111.1111111111%;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 110%;
   letter-spacing: 0.01em;
+  text-align: center;
+  color: var(--color-purple);
 }
 @media (max-width: 1539.98px) {
   .action-second__title {
-    font-size: calc(15px + 3 * (100vw - 320px) / 1219.98);
+    font-size: calc(16px + 4 * (100vw - 320px) / 1219.98);
   }
 }
 .action-second__title:not(:last-child) {
-  margin-bottom: 10px;
+  /* Если меньше контейнера */
+  margin-bottom: 30px;
+}
+@media (max-width: 1539.98px) {
+  .action-second__title:not(:last-child) {
+    margin-bottom: calc(20px + 10 * (100vw - 320px) / 1219.98);
+  }
 }
 @media (max-width: 1539.98px) and (min-width: 1219.98px) {
   .action-second__title {
@@ -752,18 +714,18 @@ section {
 }
 @media (max-width: 1539.98px) and (min-width: 1219.98px) and (max-width: 1539.98px) {
   .action-second__title {
-    font-size: calc(4px + 12 * (100vw - 320px) / 1219.98);
+    font-size: calc(-4px + 20 * (100vw - 320px) / 1219.98);
   }
 }
 @media (max-width: 1539.98px) and (min-width: 1219.98px) {
   .action-second__title:not(:last-child) {
     /* Если меньше контейнера */
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 1539.98px) and (min-width: 1219.98px) and (max-width: 1539.98px) {
   .action-second__title:not(:last-child) {
-    margin-bottom: calc(-10px + 20 * (100vw - 320px) / 1219.98);
+    margin-bottom: calc(-20px + 50 * (100vw - 320px) / 1219.98);
   }
 }
 
@@ -788,6 +750,41 @@ section {
     transform: rotate(8deg);
   }
 }
+.action__text {
+  padding-top: 18px;
+  /* Если меньше контейнера */
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 111.1111111111%;
+  letter-spacing: 0.01em;
+}
+@media (max-width: 1539.98px) {
+  .action__text {
+    font-size: calc(15px + 3 * (100vw - 320px) / 1219.98);
+  }
+}
+
+.action-third .action-first__title:not(:last-child) {
+  /* Если меньше контейнера */
+  margin-bottom: 15px;
+}
+@media (max-width: 1539.98px) {
+  .action-third .action-first__title:not(:last-child) {
+    margin-bottom: calc(5px + 10 * (100vw - 320px) / 1219.98);
+  }
+}
+@media (max-width: 1539.98px) and (min-width: 1219.98px) {
+  .action-third .action-first__title:not(:last-child) {
+    /* Если меньше контейнера */
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 1539.98px) and (min-width: 1219.98px) and (max-width: 1539.98px) {
+  .action-third .action-first__title:not(:last-child) {
+    margin-bottom: calc(-5px + 20 * (100vw - 320px) / 1219.98);
+  }
+}
+
 @media (max-width: 1219.98px) {
   .thanks {
     /* Если меньше контейнера */
@@ -816,7 +813,7 @@ section {
   position: relative;
   border-radius: 16px;
   animation: animation-show-thanks 0.8s;
-  background: var(--color-main);
+  background: var(--color-main-second);
 }
 @media (max-width: 1539.98px) {
   .thanks__body {
@@ -848,7 +845,7 @@ section {
   font-weight: 400;
   line-height: 91.4285714286%;
   text-align: center;
-  color: var(--color-grey);
+  color: var(--color-purple);
 }
 @media (max-width: 1539.98px) {
   .thanks__title {
@@ -947,7 +944,7 @@ section {
   font-weight: 400;
   line-height: 83.3333333333%;
   text-align: center;
-  color: var(--color-grey);
+  color: var(--color-purple);
 }
 @media (max-width: 1539.98px) {
   .thanks-social__title {
@@ -997,7 +994,7 @@ section {
   font-weight: 400;
   line-height: 80%;
   text-decoration: none;
-  color: var(--color-main);
+  color: var(--color-main-second);
 }
 @media (max-width: 1539.98px) {
   .thanks-navigation__link {
@@ -1009,7 +1006,7 @@ section {
     transition: color 0.2s ease 0s;
   }
   .thanks-navigation__link:hover {
-    color: var(--color-purple);
+    color: var(--color-grey);
   }
 }
 

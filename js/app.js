@@ -6,24 +6,52 @@ function formHandler() {
   const buttonSend = form.querySelector("[data-form-send]");
 
   const firstStep = (el, val) => {
-    const buttonArr = form.querySelectorAll(".action-first__elem");
+    const steps = form.querySelectorAll("[data-form-step]");
+    steps.forEach((step) => {
+      const buttonArr = step.querySelectorAll(".columns-first .action-first__elem");
 
-    buttonArr.forEach((button) => {
-      button.addEventListener("click", () => {
-        defaultStep = 2;
+      buttonArr.forEach((button) => {
+        button.addEventListener("click", () => {
+          defaultStep = 2;
 
-        const comments = form.querySelectorAll("[data-comment-text]");
+          const comments = step.querySelectorAll("[data-comment-text]");
 
-        comments.forEach((comment) => {
-          comment.style.display = "none";
+          comments.forEach((comment) => {
+            comment.style.display = "none";
 
-          if (button.getAttribute("data-comment-variant") === comment.getAttribute("data-comment-text")) {
-            comment.style.display = "block";
-          }
+            if (button.getAttribute("data-comment-variant") === comment.getAttribute("data-comment-text")) {
+              comment.style.display = "block";
+            }
+          });
+
+          if (Number(val) <= defaultStep) el.style.display = "block";
         });
+      });
+    });
+  };
 
-        if (Number(val) <= defaultStep) el.style.display = "block";
-        buttonSend.style.display = "inline-flex";
+  const secondStep = (el, val) => {
+    const steps = form.querySelectorAll("[data-form-step]");
+    steps.forEach((step) => {
+      const buttonArr = step.querySelectorAll(".columns-second .action-first__elem");
+
+      buttonArr.forEach((button) => {
+        button.addEventListener("click", () => {
+          defaultStep = 3;
+
+          const comments = step.querySelectorAll("[data-comment-text]");
+
+          comments.forEach((comment) => {
+            comment.style.display = "none";
+
+            if (button.getAttribute("data-comment-variant") === comment.getAttribute("data-comment-text")) {
+              comment.style.display = "block";
+            }
+          });
+
+          if (Number(val) <= defaultStep) el.style.display = "block";
+          buttonSend.style.display = "inline-flex";
+        });
       });
     });
   };
@@ -39,6 +67,7 @@ function formHandler() {
       }
 
       firstStep(stepEl, stepVal);
+      secondStep(stepEl, stepVal);
     });
 
     const actionEl = document.querySelector("[data-section-action]");
@@ -50,6 +79,7 @@ function formHandler() {
       try {
         actionEl.remove();
         thanksEl.style.display = "block";
+        document.body.style.backgroundColor = "var(--color-purple)";
       } catch (err) {
         console.log(err);
 
