@@ -8,21 +8,22 @@ function formHandler() {
   const firstStep = (el, val) => {
     const steps = form.querySelectorAll("[data-form-step]");
     steps.forEach((step) => {
-      const buttonArr = step.querySelectorAll(".columns-first .action-first__elem");
+      const buttonArr = step.querySelectorAll(".checkbox-item");
 
       buttonArr.forEach((button) => {
         button.addEventListener("click", () => {
           defaultStep = 2;
 
-          const comments = step.querySelectorAll("[data-comment-text]");
+          const comment = step.querySelector("[data-comment-text]");
 
-          comments.forEach((comment) => {
-            comment.style.display = "none";
-
-            if (button.getAttribute("data-comment-variant") === comment.getAttribute("data-comment-text")) {
+          (() => {
+            const buttonArrProp = step.querySelectorAll("[data-comment-variant] input[type='checkbox']");
+            if (Array.from(buttonArrProp).some((checkbox) => checkbox.checked)) {
               comment.style.display = "block";
+            } else {
+              comment.style.display = "none";
             }
-          });
+          })();
 
           if (Number(val) <= defaultStep) el.style.display = "block";
         });
@@ -33,21 +34,22 @@ function formHandler() {
   const secondStep = (el, val) => {
     const steps = form.querySelectorAll("[data-form-step]");
     steps.forEach((step) => {
-      const buttonArr = step.querySelectorAll(".columns-second .action-first__elem");
+      const buttonArr = step.querySelectorAll(".checkbox-item");
 
       buttonArr.forEach((button) => {
         button.addEventListener("click", () => {
           defaultStep = 3;
 
-          const comments = step.querySelectorAll("[data-comment-text]");
+          const comment = step.querySelector("[data-comment-text]");
 
-          comments.forEach((comment) => {
-            comment.style.display = "none";
-
-            if (button.getAttribute("data-comment-variant") === comment.getAttribute("data-comment-text")) {
+          (() => {
+            const buttonArrProp = step.querySelectorAll("[data-comment-variant] input[type='checkbox']");
+            if (Array.from(buttonArrProp).some((checkbox) => checkbox.checked)) {
               comment.style.display = "block";
+            } else {
+              comment.style.display = "none";
             }
-          });
+          })();
 
           if (Number(val) <= defaultStep) el.style.display = "block";
           buttonSend.style.display = "inline-flex";
