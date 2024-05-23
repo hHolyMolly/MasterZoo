@@ -846,7 +846,7 @@ section {
 }
 @media (max-width: 991.98px) and (max-width: 1539.98px) {
   .checkbox-item label:before, .checkbox-item label:after {
-    top: calc(0px + 2 * (100vw - 320px) / 1219.98);
+    top: calc(-2px + 4 * (100vw - 320px) / 1219.98);
   }
 }
 .checkbox-item label:before {
