@@ -1,93 +1,69 @@
 function formHandler() {
   const form = document.querySelector("[data-main-form]");
 
-  let defaultStep = 1;
-
   const buttonSend = form.querySelector("[data-form-send]");
 
-  const firstStep = (el, val) => {
+  const firstStep = () => {
     const steps = form.querySelectorAll("[data-form-step]");
     steps.forEach((step) => {
-      const buttonArr = step.querySelectorAll(".checkbox-item");
+      if (step.getAttribute("data-form-step") == 1) {
+        const checkboxs = step.querySelectorAll(".checkbox-item input[type='checkbox']");
 
-      buttonArr.forEach((button) => {
-        button.addEventListener("click", () => {
-          defaultStep = 2;
+        checkboxs.forEach((checkbox) => {
+          checkbox.addEventListener("change", (e) => {
+            const comment = step.querySelector("[data-comment-text]");
 
-          const comment = step.querySelector("[data-comment-text]");
+            if (Array.from(checkboxs).some((checkbox) => checkbox.checked)) {
+              form.querySelector("[data-form-step='2']").style.display = "block";
+            } else {
+              form.querySelector("[data-form-step='2']").style.display = "none";
+            }
 
-          (() => {
             const buttonArrProp = step.querySelectorAll("[data-comment-variant] input[type='checkbox']");
             if (Array.from(buttonArrProp).some((checkbox) => checkbox.checked)) {
               comment.style.display = "block";
             } else {
               comment.style.display = "none";
             }
-          })();
-
-          if (Number(val) <= defaultStep) el.style.display = "block";
+          });
         });
-      });
+      }
     });
   };
 
-  const secondStep = (el, val) => {
+  const secondStep = () => {
     const steps = form.querySelectorAll("[data-form-step]");
     steps.forEach((step) => {
-      const buttonArr = step.querySelectorAll(".checkbox-item");
+      if (step.getAttribute("data-form-step") == 2) {
+        const checkboxs = step.querySelectorAll(".checkbox-item input[type='checkbox']");
 
-      buttonArr.forEach((button) => {
-        button.addEventListener("click", () => {
-          defaultStep = 3;
+        checkboxs.forEach((checkbox) => {
+          checkbox.addEventListener("change", (e) => {
+            const comment = step.querySelector("[data-comment-text]");
 
-          const comment = step.querySelector("[data-comment-text]");
+            if (Array.from(checkboxs).some((checkbox) => checkbox.checked)) {
+              form.querySelector("[data-form-step='3']").style.display = "block";
+              buttonSend.style.display = "block";
+            } else {
+              form.querySelector("[data-form-step='3']").style.display = "none";
+              buttonSend.style.display = "none";
+            }
 
-          (() => {
             const buttonArrProp = step.querySelectorAll("[data-comment-variant] input[type='checkbox']");
             if (Array.from(buttonArrProp).some((checkbox) => checkbox.checked)) {
               comment.style.display = "block";
             } else {
               comment.style.display = "none";
             }
-          })();
-
-          if (Number(val) <= defaultStep) el.style.display = "block";
-          buttonSend.style.display = "inline-flex";
+          });
         });
-      });
+      }
     });
   };
 
   if (form) {
-    const steps = form.querySelectorAll("[data-form-step]");
-
-    steps.forEach((stepEl) => {
-      const stepVal = stepEl.getAttribute("data-form-step");
-
-      if (Number(stepVal) <= defaultStep) {
-        stepEl.style.display = "block";
-      }
-
-      firstStep(stepEl, stepVal);
-      secondStep(stepEl, stepVal);
-    });
-
-    const actionEl = document.querySelector("[data-section-action]");
-    const thanksEl = document.querySelector("[data-section-thanks]");
-
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      try {
-        actionEl.remove();
-        thanksEl.style.display = "block";
-        document.body.style.backgroundColor = "var(--color-purple)";
-      } catch (err) {
-        console.log(err);
-
-        window.alert("Что-то пошло не так :(");
-      }
-    });
+    firstStep();
+    secondStep();
   }
 
   var textareaEl = document.getElementsByTagName("textarea");
